@@ -1,0 +1,145 @@
+<div class="projeto-detalhes" *ngIf="projeto">
+  <div class="projeto-header">
+    <a class="voltar-link" (click)="voltarParaProjetos()">&larr; Voltar para Projetos</a>
+    <h1 class="projeto-titulo">{{projeto.titulo}}</h1>
+    <div class="projeto-meta">
+      <span class="categoria">{{projeto.categoria}}</span>
+      <span class="local">{{projeto.local}}</span>
+      <span class="area">{{projeto.area}}</span>
+      <span class="ano">{{projeto.ano}}</span>
+    </div>
+  </div>
+  
+  <div class="projeto-imagem">
+    <img [src]="projeto.imagem" [alt]="projeto.titulo">
+  </div>
+  
+  <div class="projeto-conteudo">
+    <div class="projeto-descricao">
+      <h2>Sobre o Projeto</h2>
+      <p>{{projeto.descricao}}</p>
+    </div>
+    
+    <div class="projeto-caracteristicas">
+      <h2>Características</h2>
+      <ul>
+        <li *ngFor="let caracteristica of projeto.caracteristicas">{{caracteristica}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="projeto-nao-encontrado" *ngIf="!projeto">
+  <h2>Projeto não encontrado</h2>
+  <p>O projeto que você está procurando não existe ou foi removido.</p>
+  <a class="voltar-link" (click)="voltarParaProjetos()">Voltar para Projetos</a>
+</div>
+
+<style>
+  .projeto-detalhes {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px 40px;
+  }
+  
+  .voltar-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .voltar-link:hover {
+    text-decoration: underline;
+  }
+  
+  .projeto-titulo {
+    font-size: 42px;
+    margin: 0 0 20px;
+    font-weight: 600;
+  }
+  
+  .projeto-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .projeto-imagem {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border-radius: 4px;
+  }
+  
+  .projeto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .projeto-conteudo {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+  }
+  
+  .projeto-descricao h2,
+  .projeto-caracteristicas h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  
+  .projeto-descricao p {
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  .projeto-caracteristicas ul {
+    padding-left: 20px;
+  }
+  
+  .projeto-caracteristicas li {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .projeto-nao-encontrado {
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .projeto-nao-encontrado h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .projeto-nao-encontrado p {
+    margin-bottom: 25px;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .projeto-conteudo {
+      grid-template-columns: 1fr;
+    }
+    
+    .projeto-imagem {
+      height: 350px;
+    }
+    
+    .projeto-titulo {
+      font-size: 32px;
+    }
+  }
+</style>

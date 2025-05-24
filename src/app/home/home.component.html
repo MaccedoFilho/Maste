@@ -1,0 +1,311 @@
+<div class="container">
+  <section class="hero-section">
+    <div class="hero-background"></div>
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="title-line">Com maestria,</span>
+          <span class="title-line">transformamos Sonhos</span>
+          <span class="title-line">de design de interiores</span>
+          <span class="title-line">na mais <em>autêntica Realidade</em>.</span>
+        </h1>
+        <a href="#projetos" class="cta-button">NOSSOS PROJETOS</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="about-section">
+    <div class="section-container">
+      <div class="about-content">
+        <div class="about-image">
+          <img src="/assets/images/space.jpg" alt="Foto do Arquiteto">
+        </div>
+        <div class="about-text">
+          <h2 class="section-title centered">Sobre a Maste</h2>
+          <p class="section-description">
+            Oferecemos soluções integradas para obras e reformas, com foco em planejamento estratégico, inovação e eficiência. 
+            Cada projeto é desenvolvido com base em análises técnicas que garantem maior assertividade na execução.
+          </p>
+          <p class="section-description">
+            Executamos projetos para construções residenciais e comerciais, com uma equipe especializada em gerenciar prazos, 
+            custos e padrões de qualidade. Utilizamos metodologias que asseguram controle e desempenho em todas as etapas.
+          </p>
+          <p class="section-description">
+            Nosso compromisso é entregar resultados com alto padrão técnico, respeitando cronogramas e orçamentos. 
+            A atenção aos detalhes e o foco em performance garantem soluções duradouras e alinhadas às expectativas dos clientes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos" class="projects-section">
+    <div class="section-container">
+      <h2 class="section-title centered">Nossos Projetos</h2>
+      <p class="section-subtitle">Conheça nossas obras e transformações</p>
+      
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="residencial">Residencial</button>
+        <button class="filter-btn" data-filter="comercial">Comercial</button>
+        <button class="filter-btn" data-filter="corporativo">Corporativo</button>
+      </div>
+      
+      <div class="projects-grid">
+        <div class="project-card" data-category="residencial">
+          <div class="project-image">
+            <img src="/assets/images/monastery-.jpg" alt="Residência Moderna">
+            <div class="project-overlay">
+              <a [routerLink]="['/projeto', 1]" class="project-link">Ver Detalhes</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Residencial</span>
+            <h3 class="project-title">Residência Moderna</h3>
+            <p class="project-location">São Paulo, SP</p>
+            <div class="project-specs">
+              <span class="spec-item"><i class="spec-icon-area"></i> 350m²</span>
+              <span class="spec-item"><i class="spec-icon-calendar"></i> 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="corporativo">
+          <div class="project-image">
+            <img src="/assets/images/monastery-.jpg" alt="Escritório Corporativo">
+            <div class="project-overlay">
+              <a [routerLink]="['/projeto', 2]" class="project-link">Ver Detalhes</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Corporativo</span>
+            <h3 class="project-title">Escritório Corporativo</h3>
+            <p class="project-location">Rio de Janeiro, RJ</p>
+            <div class="project-specs">
+              <span class="spec-item"><i class="spec-icon-area"></i> 520m²</span>
+              <span class="spec-item"><i class="spec-icon-calendar"></i> 2022</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" data-category="residencial">
+          <div class="project-image">
+            <img src="/assets/images/space.jpg" alt="Loft Minimalista">
+            <div class="project-overlay">
+              <a [routerLink]="['/projeto', 3]" class="project-link">Ver Detalhes</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Residencial</span>
+            <h3 class="project-title">Loft Minimalista</h3>
+            <p class="project-location">Belo Horizonte, MG</p>
+            <div class="project-specs">
+              <span class="spec-item"><i class="spec-icon-area"></i> 180m²</span>
+              <span class="spec-item"><i class="spec-icon-calendar"></i> 2023</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" data-category="residencial">
+          <div class="project-image">
+            <img src="/assets/images/stairs.jpg" alt="Casa de Praia">
+            <div class="project-overlay">
+              <a [routerLink]="['/projeto', 4]" class="project-link">Ver Detalhes</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Residencial</span>
+            <h3 class="project-title">Casa de Praia</h3>
+            <p class="project-location">Florianópolis, SC</p>
+            <div class="project-specs">
+              <span class="spec-item"><i class="spec-icon-area"></i> 420m²</span>
+              <span class="spec-item"><i class="spec-icon-calendar"></i> 2023</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" data-category="comercial">
+          <div class="project-image">
+            <img src="/assets/images/monastery-.jpg" alt="Restaurante Contemporâneo">
+            <div class="project-overlay">
+              <a [routerLink]="['/projeto', 5]" class="project-link">Ver Detalhes</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Comercial</span>
+            <h3 class="project-title">Restaurante Contemporâneo</h3>
+            <p class="project-location">Curitiba, PR</p>
+            <div class="project-specs">
+              <span class="spec-item"><i class="spec-icon-area"></i> 280m²</span>
+              <span class="spec-item"><i class="spec-icon-calendar"></i> 2022</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" data-category="comercial">
+          <div class="project-image">
+            <img src="/assets/images/space.jpg" alt="Clínica de Bem-estar">
+            <div class="project-overlay">
+              <a [routerLink]="['/projeto', 6]" class="project-link">Ver Detalhes</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category">Comercial</span>
+            <h3 class="project-title">Clínica de Bem-estar</h3>
+            <p class="project-location">Brasília, DF</p>
+            <div class="project-specs">
+              <span class="spec-item"><i class="spec-icon-area"></i> 320m²</span>
+              <span class="spec-item"><i class="spec-icon-calendar"></i> 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="diferenciais" class="why-choose-section">
+    <div class="why-section-background">
+      <div class="why-section-content">
+        <div class="why-text-container">
+          <h2 class="section-title">Por que escolher a Maste?</h2>
+          
+          <div class="features-list">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="feature-icon-clock"></i>
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">Entrega no Prazo</h3>
+                <p class="feature-description">
+                  Com a Maste, sua obra é gerenciada de forma a cumprir prazos rigorosos, evitando atrasos e custos extras.
+                </p>
+              </div>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="feature-icon-dollar"></i>
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">Redução de Custos</h3>
+                <p class="feature-description">
+                  Nossa abordagem inteligente permite uma gestão financeira eficiente, reduzindo gastos desnecessários.
+                </p>
+              </div>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="feature-icon-gear"></i>
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">Automação de Processos</h3>
+                <p class="feature-description">
+                  Automatizamos processos complexos, simplificando a gestão e aumentando a produtividade do seu projeto.
+                </p>
+              </div>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="feature-icon-doc"></i>
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">Contratos Transparentes</h3>
+                <p class="feature-description">
+                  Nossos contratos são claros e justos, garantindo que todas as partes estejam protegidas e cientes de suas responsabilidades.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="feature-icon-handshake"></i>
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">Parceria Confiável</h3>
+                <p class="feature-description">
+                  Somos parceiros de confiança, comprometidos em garantir o sucesso do seu projeto do início ao fim.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contact-section">
+    <div class="section-container">
+      <h2 class="section-title centered">Entre em Contato</h2>
+      <p class="section-subtitle">Transforme seu sonho em realidade com a Maste</p>
+      
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="contact-icon-location"></i>
+            </div>
+            <div class="contact-text">
+              <h3 class="contact-title">Endereço</h3>
+              <p class="contact-details">Rua max colin, 1075<br>Joinville SC - Brasil</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="contact-icon-phone"></i>
+            </div>
+            <div class="contact-text">
+              <h3 class="contact-title">Telefone</h3>
+              <p class="contact-details">+55 (47) 99170-1020<br>+55 (47) 99170-1020</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="contact-icon-mail"></i>
+            </div>
+            <div class="contact-text">
+              <h3 class="contact-title">E-mail</h3>
+              <p class="contact-details">contato&#64;masteobras.com<br>projetos&#64;masteobras.com</p>
+            </div>
+          </div>
+          
+          <div class="contact-social">
+            <a href="https://www.instagram.com/maste.joinville/" class="social-link"><i class="social-icon-instagram"></i></a>
+            <a href="" class="social-link"><i class="social-icon-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/maste-intelig%C3%AAncia-em-obras/posts/?feedView=all" class="social-link"><i class="social-icon-linkedin"></i></a>
+          </div>
+        </div>
+        
+        <div class="contact-form-container">
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" class="form-input" placeholder="Nome Completo" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-input" placeholder="E-mail" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" class="form-input" placeholder="Telefone">
+            </div>
+            <div class="form-group">
+              <select class="form-input">
+                <option value="" disabled selected>Tipo de Projeto</option>
+                <option value="residencial">Residencial</option>
+                <option value="comercial">Comercial</option>
+                <option value="corporativo">Corporativo</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea class="form-input form-textarea" placeholder="Conte-nos sobre o seu projeto" rows="5"></textarea>
+            </div>
+            <button type="submit" class="form-submit">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
