@@ -1,6 +1,8 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import Swiper from 'swiper';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +11,9 @@ import { RouterModule } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   title = 'MasteObras';
+  private swiper: Swiper | null = null;
   
   constructor() {}
   
@@ -19,18 +22,53 @@ export class HomeComponent implements OnInit, AfterViewInit {
   
   ngAfterViewInit() {
     setTimeout(() => {
+      this.initSwiper();
       this.setupProjectFilters();
       this.setupScrollEvents();
     }, 200);
   }
   
+  ngOnDestroy() {
+    if (this.swiper) {
+      this.swiper.destroy(true, true);
+    }
+  }
+  
+  private initSwiper() {
+    Swiper.use([Navigation, Autoplay]);
+    
+    this.swiper = new Swiper('.projects-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      speed: 800,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        }
+      }
+    });
+  }
+  
   private setupProjectFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card[data-category]');
+    const projectSlides = document.querySelectorAll('.swiper-slide[data-category]');
     
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Remover classe ativa de todos os botões
         filterBtns.forEach(b => b.classList.remove('active'));
         
         // Adicionar classe ativa no botão clicado
@@ -41,18 +79,24 @@ export class HomeComponent implements OnInit, AfterViewInit {
         
         // Mostrar todos os projetos ou filtrar por categoria
         if (filter === 'all') {
-          projectCards.forEach(card => {
-            (card as HTMLElement).style.display = '';
+          projectSlides.forEach(slide => {
+            (slide as HTMLElement).style.display = '';
           });
         } else {
-          projectCards.forEach(card => {
-            const category = card.getAttribute('data-category');
+          projectSlides.forEach(slide => {
+            const category = slide.getAttribute('data-category');
             if (category === filter) {
-              (card as HTMLElement).style.display = '';
+              (slide as HTMLElement).style.display = '';
             } else {
-              (card as HTMLElement).style.display = 'none';
+              (slide as HTMLElement).style.display = 'none';
             }
           });
+        }
+        
+        if (this.swiper) {
+          setTimeout(() => {
+            this.swiper?.update();
+          }, 100);
         }
       });
     });

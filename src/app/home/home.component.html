@@ -51,114 +51,130 @@
         <button class="filter-btn" data-filter="corporativo">Corporativo</button>
       </div>
       
-      <div class="projects-grid">
-        <div class="project-card" data-category="residencial">
-          <div class="project-image">
-            <img src="/assets/images/monastery-.jpg" alt="Residência Moderna">
-            <div class="project-overlay">
-              <a [routerLink]="['/projeto', 1]" class="project-link">Ver Detalhes</a>
+      <div class="projects-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-category="residencial">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="/assets/images/space.jpg" alt="Loft Minimalista">
+                <div class="project-overlay">
+                  <a [routerLink]="['/projeto', 3]" class="project-link">Ver Detalhes</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <span class="project-category">RESIDENCIAL</span>
+                <h3 class="project-title">Loft Minimalista</h3>
+                <p class="project-location">Belo Horizonte, MG</p>
+                <div class="project-specs">
+                  <span class="spec-item">180m²</span>
+                  <span class="spec-item">2023</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="project-info">
-            <span class="project-category">Residencial</span>
-            <h3 class="project-title">Residência Moderna</h3>
-            <p class="project-location">São Paulo, SP</p>
-            <div class="project-specs">
-              <span class="spec-item"><i class="spec-icon-area"></i> 350m²</span>
-              <span class="spec-item"><i class="spec-icon-calendar"></i> 2023</span>
-            </div>
-          </div>
-        </div>
 
-        <div class="project-card" data-category="corporativo">
-          <div class="project-image">
-            <img src="/assets/images/monastery-.jpg" alt="Escritório Corporativo">
-            <div class="project-overlay">
-              <a [routerLink]="['/projeto', 2]" class="project-link">Ver Detalhes</a>
+          <div class="swiper-slide" data-category="residencial">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="/assets/images/stairs.jpg" alt="Casa de Praia">
+                <div class="project-overlay">
+                  <a [routerLink]="['/projeto', 4]" class="project-link">Ver Detalhes</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <span class="project-category">RESIDENCIAL</span>
+                <h3 class="project-title">Casa de Praia</h3>
+                <p class="project-location">Florianópolis, SC</p>
+                <div class="project-specs">
+                  <span class="spec-item">420m²</span>
+                  <span class="spec-item">2023</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="project-info">
-            <span class="project-category">Corporativo</span>
-            <h3 class="project-title">Escritório Corporativo</h3>
-            <p class="project-location">Rio de Janeiro, RJ</p>
-            <div class="project-specs">
-              <span class="spec-item"><i class="spec-icon-area"></i> 520m²</span>
-              <span class="spec-item"><i class="spec-icon-calendar"></i> 2022</span>
+          
+          <div class="swiper-slide" data-category="residencial">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="/assets/images/monastery-.jpg" alt="Residência Moderna">
+                <div class="project-overlay">
+                  <a [routerLink]="['/projeto', 1]" class="project-link">Ver Detalhes</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <span class="project-category">RESIDENCIAL</span>
+                <h3 class="project-title">Residência Moderna</h3>
+                <p class="project-location">São Paulo, SP</p>
+                <div class="project-specs">
+                  <span class="spec-item">350m²</span>
+                  <span class="spec-item">2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="swiper-slide" data-category="comercial">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="/assets/images/monastery-.jpg" alt="Restaurante Contemporâneo">
+                <div class="project-overlay">
+                  <a [routerLink]="['/projeto', 5]" class="project-link">Ver Detalhes</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <span class="project-category">COMERCIAL</span>
+                <h3 class="project-title">Restaurante Contemporâneo</h3>
+                <p class="project-location">Curitiba, PR</p>
+                <div class="project-specs">
+                  <span class="spec-item">280m²</span>
+                  <span class="spec-item">2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="swiper-slide" data-category="comercial">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="/assets/images/space.jpg" alt="Clínica de Bem-estar">
+                <div class="project-overlay">
+                  <a [routerLink]="['/projeto', 6]" class="project-link">Ver Detalhes</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <span class="project-category">COMERCIAL</span>
+                <h3 class="project-title">Clínica de Bem-estar</h3>
+                <p class="project-location">Brasília, DF</p>
+                <div class="project-specs">
+                  <span class="spec-item">320m²</span>
+                  <span class="spec-item">2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="swiper-slide" data-category="corporativo">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="/assets/images/monastery-.jpg" alt="Escritório Corporativo">
+                <div class="project-overlay">
+                  <a [routerLink]="['/projeto', 2]" class="project-link">Ver Detalhes</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <span class="project-category">CORPORATIVO</span>
+                <h3 class="project-title">Escritório Corporativo</h3>
+                <p class="project-location">Rio de Janeiro, RJ</p>
+                <div class="project-specs">
+                  <span class="spec-item">520m²</span>
+                  <span class="spec-item">2022</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        
-        <div class="project-card" data-category="residencial">
-          <div class="project-image">
-            <img src="/assets/images/space.jpg" alt="Loft Minimalista">
-            <div class="project-overlay">
-              <a [routerLink]="['/projeto', 3]" class="project-link">Ver Detalhes</a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-category">Residencial</span>
-            <h3 class="project-title">Loft Minimalista</h3>
-            <p class="project-location">Belo Horizonte, MG</p>
-            <div class="project-specs">
-              <span class="spec-item"><i class="spec-icon-area"></i> 180m²</span>
-              <span class="spec-item"><i class="spec-icon-calendar"></i> 2023</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-card" data-category="residencial">
-          <div class="project-image">
-            <img src="/assets/images/stairs.jpg" alt="Casa de Praia">
-            <div class="project-overlay">
-              <a [routerLink]="['/projeto', 4]" class="project-link">Ver Detalhes</a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-category">Residencial</span>
-            <h3 class="project-title">Casa de Praia</h3>
-            <p class="project-location">Florianópolis, SC</p>
-            <div class="project-specs">
-              <span class="spec-item"><i class="spec-icon-area"></i> 420m²</span>
-              <span class="spec-item"><i class="spec-icon-calendar"></i> 2023</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-card" data-category="comercial">
-          <div class="project-image">
-            <img src="/assets/images/monastery-.jpg" alt="Restaurante Contemporâneo">
-            <div class="project-overlay">
-              <a [routerLink]="['/projeto', 5]" class="project-link">Ver Detalhes</a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-category">Comercial</span>
-            <h3 class="project-title">Restaurante Contemporâneo</h3>
-            <p class="project-location">Curitiba, PR</p>
-            <div class="project-specs">
-              <span class="spec-item"><i class="spec-icon-area"></i> 280m²</span>
-              <span class="spec-item"><i class="spec-icon-calendar"></i> 2022</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-card" data-category="comercial">
-          <div class="project-image">
-            <img src="/assets/images/space.jpg" alt="Clínica de Bem-estar">
-            <div class="project-overlay">
-              <a [routerLink]="['/projeto', 6]" class="project-link">Ver Detalhes</a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-category">Comercial</span>
-            <h3 class="project-title">Clínica de Bem-estar</h3>
-            <p class="project-location">Brasília, DF</p>
-            <div class="project-specs">
-              <span class="spec-item"><i class="spec-icon-area"></i> 320m²</span>
-              <span class="spec-item"><i class="spec-icon-calendar"></i> 2023</span>
-            </div>
-          </div>
-        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
     </div>
   </section>
